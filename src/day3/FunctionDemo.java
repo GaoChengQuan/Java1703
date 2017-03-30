@@ -28,8 +28,8 @@ public class FunctionDemo {
 	//in type FunctionDemo
 	//void show(int x,char y,double z){}
 	
-	int show(int a,double c,char b){return 0;}
-	
+	//int show(int a,double c,char b){return 0;}
+	void show(int a,double c,char b){}
 	// void show(int a,double c,char b){}
 
 	//double show(int x,char y,double z){}
