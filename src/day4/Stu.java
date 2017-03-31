@@ -37,5 +37,4 @@ public class Stu {
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
-
 }
