@@ -16,7 +16,7 @@ public class Dog extends Animal{
 //		this.name = name;
 //		this.color = color;
 		this.legCount = legCount;
-		System.out.println("Dog()");
+		System.out.println("Dog()----2");
 	}
 
 	public int getLegCount() {
@@ -28,6 +28,6 @@ public class Dog extends Animal{
 	}
 
 	public void cry() {
-		System.out.println(super.getColor() + "的" + super.getName() + "正在咬人");
+		System.out.println(getColor() + "的" + super.getName() + "正在咬人");
 	}
 }
