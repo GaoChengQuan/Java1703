@@ -2,11 +2,11 @@ package day8;
 
 
 public class FinalTest {
-	private static double PI = 3.14;
+	private static final double PI = 3.14;
 	
 	public static void main(String[] args) {
 		int num = 23;
-		PI = 34;
+		//PI = 34;
 //		pi = 4.12;
 //		PI * 89;
 	}
