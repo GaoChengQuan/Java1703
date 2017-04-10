@@ -73,7 +73,7 @@ public class ListTest {
 	public void testMap() {
 		// CN   中华人民共和国  US 美利坚合众国 
 		// key  value
-		Map<String, String> map = new HashMap<String, String>();
+		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("CN", "中华人民共和国");
 		map.put("US", "美利坚合众国 ");
 		// map.put(new Student(), new Teacher());
