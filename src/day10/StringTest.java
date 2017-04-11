@@ -116,13 +116,16 @@ public class StringTest {
 		String str4 = "python";
 		String str5 = "python";
 		
-		StringBuilder stringBuilder = new StringBuilder(str1);
-		stringBuilder.append(str2);
-		stringBuilder.append(str3);
-		stringBuilder.append(str4);
-		stringBuilder.append(str5);
+		StringBuilder builder = new StringBuilder(str1);
+		//链式编程
+		builder.append(str2).append(str3).append(str4).append(str5);
 		
-		System.out.println(stringBuilder);
+//		builder.append(str2);
+//		builder.append(str3);
+//		builder.append(str4);
+//		builder.append(str5);
+		
+		System.out.println(builder);
 	}
 	
 	public static String trim(String str) {
