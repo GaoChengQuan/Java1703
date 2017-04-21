@@ -2,6 +2,7 @@ package day17.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -29,6 +30,31 @@ public class JdbcUtil {
 	
 	public static void close(Connection connection, Statement statement) {
 		//6.后打开的先关闭
+		if (statement != null) {
+			try {
+				statement.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		if (connection != null) {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static void close(Connection connection, Statement statement, ResultSet resultSet) {
+		//6.后打开的先关闭
+		if (resultSet != null) {
+			try {
+				resultSet.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 		if (statement != null) {
 			try {
 				statement.close();

@@ -64,7 +64,6 @@ public class JdbcDemo {
 	
 	@Test
 	public void select() {
-
 		Connection connection = null;
 		Statement statement = null;
 		try {
@@ -101,6 +100,7 @@ public class JdbcDemo {
 	public void select2() {
 		Connection connection = null;
 		Statement statement = null;
+		ResultSet resultSet = null;
 		try {
 			connection = JdbcUtil.getConnection();
 			//3.创建Statement
@@ -109,7 +109,7 @@ public class JdbcDemo {
 			String teacherName = "lisi";
 			String sql = "SELECT * FROM teacher where name='" + teacherName + "';";
 			//5.执行sql语句
-			ResultSet resultSet = statement.executeQuery(sql);
+			resultSet = statement.executeQuery(sql);
 			while (resultSet.next()) {
 				//String name = resultSet.getString(2);
 				int id = resultSet.getInt("id");
@@ -121,7 +121,7 @@ public class JdbcDemo {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			JdbcUtil.close(connection, statement);
+			JdbcUtil.close(connection, statement, resultSet);
 		}
 	}
 }
